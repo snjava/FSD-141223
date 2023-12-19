@@ -8,6 +8,7 @@ public class VariableDemo
 		empId = 1234; // initialization
 		double salary = 2342344.23;
 		double monthSal = salary / 12;
+
 		System.out.println(empId);
 		System.out.println(salary);
 		System.out.println(monthSal);
