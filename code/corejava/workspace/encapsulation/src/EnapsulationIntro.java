@@ -13,44 +13,35 @@ public class EnapsulationIntro {
 		
 	}
 }
-
 // DTO (Data Transfer Object), Entity, Bean, Encapsulated, POJO (Plain Old Java Object)
 class Product {
 	private int id;
 	private String name;
 	private double price;
-	private int quantity;
-	
+	private int qty;
 	public int getId() {
 		return id;
 	}
-	
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
-	
+	public void setName(String name) {
+		this.name = name;
+	}
 	public double getPrice() {
 		return price;
 	}
-	
+	public void setPrice(double price) {
+		this.price = price;
+	}
 	public int getQty() {
-		return quantity;
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
 	}
 	
-	public void setId(int i) {
-		id = i;
-	}
-	public void setName(String nm) {
-		name = nm.toUpperCase();
-	}
-	public void setPrice(double p) {
-		if(p<1) {
-			System.out.println("Invalid Price");
-			System.exit(0);
-		}
-		price = p;
-	}
-	public void setQty(int q) {
-		quantity = q;
-	}
 }
