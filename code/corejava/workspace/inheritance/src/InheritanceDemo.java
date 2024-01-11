@@ -6,6 +6,8 @@ public class InheritanceDemo {
 		e1.name = "Abc";
 		e1.gender = "F";
 		
+		System.out.println(e1);
+		
 		e1.printPersonDetails();
 		e1.printEmployeeDetails();
 		
