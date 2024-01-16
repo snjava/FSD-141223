@@ -15,6 +15,7 @@ class ThisDemo {
 	}
 	public void demo(int a) {
 		System.out.println("This is demo function..");
-		System.out.println("a = " + this.a); // 1234
+		System.out.println("a = " + a); // 1234
+		System.out.println("a = " + this.a); // 10
 	}
 }
