@@ -3,7 +3,7 @@ public class StringBuilderDemo
 	public static void main(String args[])
 	{
 		StringBuilder sb = new StringBuilder("Hello");
-		System.out.println(sb);
+		System.out.println(sb); // Hello
 		sb.append(" Java");  
 		System.out.println(sb); // Hello Java
 		sb.insert(6, "String ");	
