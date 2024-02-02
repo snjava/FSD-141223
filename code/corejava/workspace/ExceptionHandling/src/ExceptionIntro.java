@@ -5,10 +5,9 @@ public class ExceptionIntro {
 	public static void main(String[] args) {
 		System.out.println("PROGRAM EXECUTION STARTED");
 		int arr[] = {11,2,3,4,5,32,12,65,43,23};
-		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter Index : ");
 		try {
+			System.out.println("Enter Index : ");
 			int index = scan.nextInt();
 			System.out.println("Value : " + arr[index]);
 		}
@@ -20,9 +19,9 @@ public class ExceptionIntro {
 		}
 		catch(Exception ex) {
 			System.out.println("Something went wrong.. Try after sometime...");
-		}
-		finally {
+		} finally {
 			scan.close();
+			System.out.println("FINALLY...");
 		}
 		System.out.println("PROGRAM EXECUTION COMPLETED");
 	}
