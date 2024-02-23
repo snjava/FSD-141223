@@ -1,4 +1,7 @@
+import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 /*
  * Wanted to create a list of student which can be frequently modifies, the student has to store
@@ -12,13 +15,49 @@ public class CutomeGenericType {
 		Student s3 = new Student(23, "Lmn", "891998899");
 		Student s4 = new Student(13, "Pqr", "771998899");
 		Student s5 = new Student(11, "Stu", "671998899");
-		LinkedHashSet<Student> studentList = new LinkedHashSet<Student>();
+		LinkedList<Student> studentList = new LinkedList<Student>();
 		studentList.add(s1);
 		studentList.add(s2);
 		studentList.add(s3);
 		studentList.add(s4);
 		studentList.add(s5);
 		System.out.println(studentList);
+		
+		// get Object by Enhance For Loop
+		for(Student obj : studentList) {
+			System.out.println("Id : " + obj.id);
+			System.out.println("Name : " + obj.name);
+			System.out.println("Contact : " + obj.contact);
+			System.out.println("----------------------------------");
+		}
+		
+		// Get Object by Iterator
+		/*Iterator<Student> it = studentList.iterator();
+		while(it.hasNext()) {
+			Student obj = it.next();
+			System.out.println("Id : " + obj.id);
+			System.out.println("Name : " + obj.name);
+			System.out.println("Contact : " + obj.contact);
+			System.out.println("----------------------------------");
+		}*/
+		
+		// Get Object by ListIterator
+		/*ListIterator<Student> it = studentList.listIterator();
+		while(it.hasNext()) {
+			Student obj = it.next();
+			System.out.println("Id : " + obj.id);
+			System.out.println("Name : " + obj.name);
+			System.out.println("Contact : " + obj.contact);
+			System.out.println("----------------------------------");
+		}
+		System.out.println("------Reverse Direction---------");
+		while(it.hasPrevious()) {
+			Student obj = it.previous();
+			System.out.println("Id : " + obj.id);
+			System.out.println("Name : " + obj.name);
+			System.out.println("Contact : " + obj.contact);
+			System.out.println("----------------------------------");
+		}*/
 	}
 }
 
