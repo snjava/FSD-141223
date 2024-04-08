@@ -3,9 +3,11 @@ package com.institute.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.institute.dto.StudInfo;
 import com.institute.service.UserOperationService;
 
 @RestController
@@ -43,4 +45,32 @@ public class UserOperationsController {
 		return nameResponse + ageResponse;
 	}
 	
+	// http://localhost:8080/get-data-by-json
+	@GetMapping("/get-data-by-json")
+	public String getUserDataByJson(@RequestBody StudInfo info) {
+		
+		String fullname = info.getFname() + " " + info.getMname() + " " + info.getLname();
+		int age = operationService.calculateAge(info.getByear());
+		
+		String nameResponse = "<h1>Welcome user, "+ fullname + "</h1>";
+		String ageResponse = "<h1> Your Age : "+ age +"</h1>";
+		
+		return nameResponse + ageResponse;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
