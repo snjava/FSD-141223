@@ -33,6 +33,14 @@ public class EmployeeService {
 		return employee;
 	}
 	
+	
+	
+	public boolean updateEmployee(int id, String email) {
+		Employee emp = getEmpById(id);
+		emp.setEmail(email);
+		return true;
+	}
+	
 }
 
 
